@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] Transform firePoint;
@@ -9,9 +10,32 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] float bulletSpeed;
 
+    public bool canMachine;
+    public bool canShot;
+    public bool canRoket;
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) )
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            canMachine = true;
+            canShot = false;
+            canRoket = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            canShot = true;
+            canMachine = false;
+            canRoket = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            canRoket = true;
+            canMachine = false;
+            canShot = false;
+        }
+
+        if (canRoket && Input.GetMouseButtonDown(0))
         {
             Shoot();
         }

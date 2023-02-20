@@ -5133,6 +5133,7 @@ GameObject:
   - component: {fileID: 839472735}
   - component: {fileID: 839472736}
   - component: {fileID: 839472737}
+  - component: {fileID: 839472738}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -5282,3 +5283,21 @@ MonoBehaviour:
   firePoint: {fileID: 839472733}
   bulletPref: {fileID: 1451319847284928921, guid: ecbfae4db5ddaf74aaa3aaf38f923a63, type: 3}
   bulletSpeed: 20
+  canMachine: 0
+  canShot: 0
+  canRoket: 0
+--- !u!114 &839472738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839472731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a924bc6c8fada14db8388f1384edcd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  maxHP: 10
+  hpRecovery: 1
