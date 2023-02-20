@@ -11,6 +11,33 @@ public abstract class PlayerShoot : MonoBehaviour
 {
     private GunStats gStats;
 
+    public bool canMachine;
+    public bool canRoket;
+    public bool canShot;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            canMachine = true;
+            canRoket = false;
+            canShot = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            canRoket = true;
+            canMachine = false;
+            canShot = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            canShot = true;
+            canMachine = false;
+            canRoket = false;
+        }
+    }
+
+
     public float bulletCount
     {
         set => gStats.bulletCount = Mathf.Clamp(value, 0, MaxBulletCount);
@@ -23,4 +50,6 @@ public abstract class PlayerShoot : MonoBehaviour
     {
         bulletCount = MaxBulletCount;
     }
+
+    public abstract void TakeDamage(float damage);
 }
