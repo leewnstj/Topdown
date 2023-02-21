@@ -8,6 +8,9 @@ public class RoketLauncher : Entity
     public float maxHP;
     public float HPRe;
     public float MaxBullet;
+
+    public void 
+
     public override float MaxHP => maxHP;
 
     public override float HPRecovery => HPRe;

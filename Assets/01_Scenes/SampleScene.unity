@@ -133,10 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 173052813}
   - component: {fileID: 173052814}
-  - component: {fileID: 173052816}
-  - component: {fileID: 173052815}
   m_Layer: 6
-  m_Name: GameObject
+  m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,37 +163,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 173052812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61d249afdb5f36e41a93ad84d48f33fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &173052815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173052812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba54de59e361f9428a435808923fa40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &173052816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173052812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a86cd16962a2e1b4d943ee4e0c6a6b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMachine: 0
-  canRoket: 0
-  canShot: 0
-  maxBullet: 0
+  target: {fileID: 0}
+  maxHP: 30
+  HPRe: 0.1
+  MaxBullet: 15
 --- !u!1 &293039002
 GameObject:
   m_ObjectHideFlags: 0
@@ -5205,7 +5179,6 @@ GameObject:
   - component: {fileID: 839472734}
   - component: {fileID: 839472735}
   - component: {fileID: 839472736}
-  - component: {fileID: 839472738}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -5341,18 +5314,3 @@ MonoBehaviour:
   playerSpeed: 5
   cam: {fileID: 519420031}
   rigid: {fileID: 839472735}
---- !u!114 &839472738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839472731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a924bc6c8fada14db8388f1384edcd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  maxHP: 10
-  hpRecovery: 1
