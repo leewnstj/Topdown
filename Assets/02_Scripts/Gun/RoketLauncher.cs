@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoketLauncher : PlayerShoot
+public class RoketLauncher : Entity
 {
-    private void Awake()
-    {
-        base.SetUP();
-    }
+
+    public float maxHP;
+    public float HPRe;
+    public float MaxBullet;
+    public override float MaxHP => maxHP;
+
+    public override float HPRecovery => HPRe;
+
+    public override float MaxBulletCount => MaxBullet;
 
     public override void TakeDamage(float damage)
     {
-        
+        HP -= damage;
     }
-
-    [SerializeField] float maxBullet;
-
-
-
-    public override float MaxBulletCount => maxBullet;
 }
