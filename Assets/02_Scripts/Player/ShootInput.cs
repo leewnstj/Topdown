@@ -6,12 +6,17 @@ public class ShootInput : MonoBehaviour
 {
     [Header("Change Gun")]
     [SerializeField] float ChangeCoolTime;
-    private float currentChangeTime;
+    public float currentChangeTime;
 
     [Header("Bool")]
     public bool isMachineGun;
     public bool isShootGun;
     public bool isRoketLauncher;
+
+    private void Start()
+    {
+        isMachineGun = true;
+    }
 
     private void Update()
     {
@@ -22,20 +27,22 @@ public class ShootInput : MonoBehaviour
                 isMachineGun = true;
                 isShootGun = false;
                 isRoketLauncher = false;
+                currentChangeTime = ChangeCoolTime;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 isShootGun = true;
                 isMachineGun = false;
                 isRoketLauncher = false;
+                currentChangeTime = ChangeCoolTime;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 isRoketLauncher = true;
                 isMachineGun = false;
                 isShootGun = false;
+                currentChangeTime = ChangeCoolTime;
             }
-            currentChangeTime = ChangeCoolTime;
         }
         currentChangeTime -= Time.deltaTime;
     }

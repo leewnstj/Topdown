@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 839472734}
   - component: {fileID: 839472735}
   - component: {fileID: 839472736}
+  - component: {fileID: 839472737}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -497,6 +498,23 @@ MonoBehaviour:
   playerSpeed: 5
   cam: {fileID: 519420031}
   rigid: {fileID: 839472735}
+--- !u!114 &839472737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839472731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb165c6dbefc5f47b120a7a7dd5c9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeCoolTime: 5
+  currentChangeTime: 0
+  isMachineGun: 0
+  isShootGun: 0
+  isRoketLauncher: 0
 --- !u!1 &930619816
 GameObject:
   m_ObjectHideFlags: 3
