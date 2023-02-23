@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class ShootInput : MonoBehaviour
 {
     [Header("Change Gun")]
@@ -12,6 +12,11 @@ public class ShootInput : MonoBehaviour
     public bool isMachineGun;
     public bool isShootGun;
     public bool isRoketLauncher;
+
+    [Header("UnityEvents")]
+    public UnityEvent machine;
+    public UnityEvent shoot;
+    public UnityEvent roket;
 
     private void Start()
     {
@@ -45,5 +50,18 @@ public class ShootInput : MonoBehaviour
             }
         }
         currentChangeTime -= Time.deltaTime;
-    }
+
+        if (isMachineGun)
+        {
+            machine.Invoke();
+        }
+        else if (isShootGun)
+        {
+            shoot.Invoke();
+        }
+        else if(isRoketLauncher)
+        {
+            roket.Invoke();
+        }
+    }    
 }
