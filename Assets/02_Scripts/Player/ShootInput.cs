@@ -45,7 +45,7 @@ public class ShootInput : MonoBehaviour
             {
                 isRoketLauncher = true;
                 isMachineGun = false;
-                isShootGun = false;
+                isShootGun = true;
                 currentChangeTime = ChangeCoolTime;
             }
         }
