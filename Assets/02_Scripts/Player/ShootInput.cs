@@ -45,7 +45,7 @@ public class ShootInput : MonoBehaviour
             {
                 isRoketLauncher = true;
                 isMachineGun = false;
-                isShootGun = true;
+                isShootGun = false;
                 currentChangeTime = ChangeCoolTime;
             }
         }
@@ -62,10 +62,6 @@ public class ShootInput : MonoBehaviour
         else if(isRoketLauncher)
         {
             roket.Invoke();
-        }
-        else
-        {
-
         }
     }    
 }
