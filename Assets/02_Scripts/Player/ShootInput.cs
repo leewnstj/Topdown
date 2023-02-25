@@ -63,5 +63,9 @@ public class ShootInput : MonoBehaviour
         {
             roket.Invoke();
         }
+        else
+        {
+
+        }
     }    
 }
