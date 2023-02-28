@@ -61,6 +61,7 @@ public class ShootInput : MonoBehaviour
         }
         else if(isRoketLauncher)
         {
+            roket.Invoke();
         }
     }    
 }
