@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerRotation()
     {
-        rigid.MovePosition(rigid.position + movement * playerSpeed * Time.deltaTime);
+        rigid.velocity = new Vector2(movement.x, movement.y).normalized * playerSpeed;
 
         Vector2 lookDir = mousePoint - rigid.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;

@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Obstacle-Behind
+    uniqueID: 2953663967
+    locked: 0
+  - name: Player
+    uniqueID: 598683603
+    locked: 0
+  - name: Obstacle-Front
+    uniqueID: 3315218021
+    locked: 0
