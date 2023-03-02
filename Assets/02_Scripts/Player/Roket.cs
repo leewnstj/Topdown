@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Roket : ShootSource
 {
-    private void Update()
-    {
-        
-
-
-    }
 
     public override void Shooting()
     {
-        
-
-
+        if(currentAttack <= 0)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                CreateBullet();
+            }
+        }
+        currentAttack -= Time.deltaTime;
     }
 }
