@@ -2,25 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MachineGun : MonoBehaviour
+public class Guns : MonoBehaviour
 {
+    [Header("MACHINEGUN")]
     [SerializeField] GameObject machineGunBullet;
-    [SerializeField] float ShootCool;
-    private float currentCool;
-    [SerializeField] float bulletSpeed;
+    [SerializeField] float MachineShootCool;
+    private float currentMachineCool;
+    [SerializeField] float MachinebulletSpeed;
 
     public void ShootingMachine()
     {
-        if(currentCool <= 0)
+        if(currentMachineCool <= 0)
         {
+
+            Debug.Log(1);
+
             if (Input.GetMouseButton(0))
             {
                 GameObject bullet = Instantiate(machineGunBullet, transform.position, transform.rotation);
                 Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
-                rigid.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+                rigid.AddForce(transform.up * MachinebulletSpeed, ForceMode2D.Impulse);
+                currentMachineCool = MachineShootCool;
             }
-            currentCool = ShootCool;
         }
-        currentCool -= Time.deltaTime;
+        currentMachineCool -= Time.deltaTime;
     }
 }
